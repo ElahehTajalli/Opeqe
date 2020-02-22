@@ -6,14 +6,6 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 
 export default class Cards extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-
-    }
-  }
-
   render () {
     return (
       <Card>

@@ -4,14 +4,6 @@ import Middle from './Middle'
 import Main from './Main'
 
 export default class Opeqe extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-
-    }
-  }
-
   render () {
     return (
       <>

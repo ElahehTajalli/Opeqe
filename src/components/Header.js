@@ -3,14 +3,6 @@ import opeqeImage from '../photos/image_2020-02-21_12-33-03.png'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 
 export default class Header extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-
-    }
-  }
-
   render () {
     return (
       <div className='header-div'>
