@@ -4,6 +4,9 @@ import CardActionArea from '@material-ui/core/CardActionArea'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
+import TimerIcon from '@material-ui/icons/Timer';
+
+
 
 export default class Cards extends Component {
   render () {
@@ -15,16 +18,33 @@ export default class Cards extends Component {
             title={this.props.menu.title}
             style={{ height: '140px' }}
           />
-          <CardContent>
+          <CardContent style={{ display: 'flex', flexDirection: 'column' }}>
             <Typography gutterBottom variant='h5' component='h2'>
               {this.props.menu.title}
             </Typography>
-            <Typography variant='body2' color='textSecondary' component='p'>
-              {this.props.menu.menuType.title}, {this.props.menu.cuisineType.title}, {this.props.menu.courseType.title}
-            </Typography>
-            <Typography variant='body2' color='textSecondary' component='p'>
+            <div>
+              <span style={{ color: '#026764', fontSize: '14px' }}>
+                {this.props.menu.menuType.title}
+              </span>
+              <Typography variant='body2' color='textSecondary' component='span'>
+              , {this.props.menu.cuisineType.title}, {this.props.menu.courseType.title}
+              </Typography>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Typography className='timer-div' variant='body2' color='textSecondary' component='span' style={{ display: 'flex', alignItems: 'center' }}>
+                  <TimerIcon className='timer-icon' /> 4-6 Mins
+                </Typography>
+                <Typography className='price-div' variant='body2' color='textSecondary' component='span'>
                 $ {this.props.menu.price}
-            </Typography>
+                </Typography>
+              </div>
+              <span className='pick-div'>
+                Free Pickup
+              </span>
+
+            </div>
+            
           </CardContent>
         </CardActionArea>
       </Card>
